@@ -1,0 +1,19 @@
+name: Generate Release Notes
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers when a version tag like v1.0.0 is pushed
+
+jobs:
+  release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate Release Notes
+        uses: philhoyt/create-release-notes@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ github.ref }}
