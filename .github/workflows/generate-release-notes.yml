@@ -33,7 +33,7 @@ jobs:
 
           git commit -m "Add release notes for ${{ github.ref_name }}"
 
-          git push origin main  # Change this to your branch name
+          git push origin master  # Change this to your branch name
       - name: Upload Release Notes as Artifact
         uses: actions/upload-artifact@v3
         with:
