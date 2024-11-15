@@ -16,8 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Install release-notes-generator
-        run: npm install -g release-notes-generator
+      - name: Install Release Drafter (for Release Notes)
+        uses: release-drafter/release-drafter@v5
       - name: Generate Release Notes
         run: >
           release-notes-generator --token ${{ secrets.GITHUB_TOKEN }} --repo
@@ -33,7 +33,7 @@ jobs:
 
           git commit -m "Add release notes for ${{ github.ref_name }}"
 
-          git push origin ${GITHUB_REF}
+          git push origin main  # Change this to your branch name
       - name: Upload Release Notes as Artifact
         uses: actions/upload-artifact@v3
         with:
