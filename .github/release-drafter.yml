@@ -1,0 +1,39 @@
+## Release Date:
+
+  ${{date}}
+
+
+  ## Overview:
+
+  Describe the main focus of this release, such as major updates, new
+  integrations, or platform improvements.
+
+
+  ## Highlights:
+
+  - Bullet-point list of major highlights and why they’re important.
+
+
+  ## New Features:
+
+  ${{new_features}}
+
+
+  ## Improvements/Enhancements:
+
+  ${{improvements}}
+
+
+  ## Bug Fixes:
+
+  ${{bug_fixes}}
+
+
+  ## Known Issues:
+
+  ${{known_issues}}
+
+
+  ## Workaround:
+
+  Suggested workaround if applicable.
